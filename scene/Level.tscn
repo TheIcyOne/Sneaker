@@ -1,0 +1,1019 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://script/level.gd" type="Script" id=1]
+[ext_resource path="res://scene/Guard.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/wall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sprite/stairs.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Level" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
+Guard = ExtResource( 2 )
+Walls = ExtResource( 3 )
+
+[node name="stairs" type="StaticBody2D" parent="." index="0" groups=[
+"stairs",
+]]
+
+position = Vector2( 993.096, 566.964 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stairs" index="0"]
+
+position = Vector2( -6.2753, -5.42631 )
+scale = Vector2( 1.64649, 1.6282 )
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="stairs" index="1"]
+
+position = Vector2( -6.97509, -8.97509 )
+scale = Vector2( 1.37344, 1.37344 )
+frames = SubResource( 2 )
+animation = "default"
+
+[node name="exterior_walls" type="Node2D" parent="." index="1"]
+
+[node name="Top" type="Node2D" parent="exterior_walls" index="0"]
+
+editor/display_folded = true
+
+[node name="wall" parent="exterior_walls/Top" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 7.02936, 7.522 )
+
+[node name="wall28" parent="exterior_walls/Top" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 389.853, 7.522 )
+
+[node name="wall65" parent="exterior_walls/Top" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 867.694, 7.53668 )
+
+[node name="wall16" parent="exterior_walls/Top" index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 198.884, 7.53593 )
+
+[node name="wall47" parent="exterior_walls/Top" index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 581.708, 7.53593 )
+
+[node name="wall10" parent="exterior_walls/Top" index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 102.029, 6.522 )
+
+[node name="wall37" parent="exterior_walls/Top" index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 484.853, 6.522 )
+
+[node name="wall62" parent="exterior_walls/Top" index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 962.694, 6.53668 )
+
+[node name="wall23" parent="exterior_walls/Top" index="8" instance=ExtResource( 3 )]
+
+position = Vector2( 293.884, 6.53593 )
+
+[node name="wall63" parent="exterior_walls/Top" index="9" instance=ExtResource( 3 )]
+
+position = Vector2( 771.725, 6.55061 )
+
+[node name="wall44" parent="exterior_walls/Top" index="10" instance=ExtResource( 3 )]
+
+position = Vector2( 676.708, 6.53593 )
+
+[node name="wall6" parent="exterior_walls/Top" index="11" instance=ExtResource( 3 )]
+
+position = Vector2( 55.0294, 7.522 )
+
+[node name="wall32" parent="exterior_walls/Top" index="12" instance=ExtResource( 3 )]
+
+position = Vector2( 437.853, 7.522 )
+
+[node name="wall64" parent="exterior_walls/Top" index="13" instance=ExtResource( 3 )]
+
+position = Vector2( 915.694, 7.53668 )
+
+[node name="wall20" parent="exterior_walls/Top" index="14" instance=ExtResource( 3 )]
+
+position = Vector2( 246.884, 7.53593 )
+
+[node name="wall40" parent="exterior_walls/Top" index="15" instance=ExtResource( 3 )]
+
+position = Vector2( 629.708, 7.53593 )
+
+[node name="wall12" parent="exterior_walls/Top" index="16" instance=ExtResource( 3 )]
+
+position = Vector2( 150.029, 6.522 )
+
+[node name="wall41" parent="exterior_walls/Top" index="17" instance=ExtResource( 3 )]
+
+position = Vector2( 532.853, 6.522 )
+
+[node name="wall54" parent="exterior_walls/Top" index="18" instance=ExtResource( 3 )]
+
+position = Vector2( 1010.69, 6.53668 )
+
+[node name="wall24" parent="exterior_walls/Top" index="19" instance=ExtResource( 3 )]
+
+position = Vector2( 341.884, 6.53593 )
+
+[node name="wall49" parent="exterior_walls/Top" index="20" instance=ExtResource( 3 )]
+
+position = Vector2( 819.725, 6.55061 )
+
+[node name="wall46" parent="exterior_walls/Top" index="21" instance=ExtResource( 3 )]
+
+position = Vector2( 724.708, 6.53593 )
+
+[node name="wall2" parent="exterior_walls/Top" index="22" instance=ExtResource( 3 )]
+
+position = Vector2( 22.8746, 7.41493 )
+
+[node name="wall25" parent="exterior_walls/Top" index="23" instance=ExtResource( 3 )]
+
+position = Vector2( 405.698, 7.41493 )
+
+[node name="wall50" parent="exterior_walls/Top" index="24" instance=ExtResource( 3 )]
+
+position = Vector2( 883.54, 7.42961 )
+
+[node name="wall13" parent="exterior_walls/Top" index="25" instance=ExtResource( 3 )]
+
+position = Vector2( 214.729, 7.42886 )
+
+[node name="wall35" parent="exterior_walls/Top" index="26" instance=ExtResource( 3 )]
+
+position = Vector2( 597.553, 7.42886 )
+
+[node name="wall7" parent="exterior_walls/Top" index="27" instance=ExtResource( 3 )]
+
+position = Vector2( 117.875, 6.41493 )
+
+[node name="wall34" parent="exterior_walls/Top" index="28" instance=ExtResource( 3 )]
+
+position = Vector2( 500.698, 6.41493 )
+
+[node name="wall55" parent="exterior_walls/Top" index="29" instance=ExtResource( 3 )]
+
+position = Vector2( 978.54, 6.42961 )
+
+[node name="wall22" parent="exterior_walls/Top" index="30" instance=ExtResource( 3 )]
+
+position = Vector2( 309.729, 6.42886 )
+
+[node name="wall56" parent="exterior_walls/Top" index="31" instance=ExtResource( 3 )]
+
+position = Vector2( 787.57, 6.44353 )
+
+[node name="wall43" parent="exterior_walls/Top" index="32" instance=ExtResource( 3 )]
+
+position = Vector2( 692.553, 6.42886 )
+
+[node name="wall4" parent="exterior_walls/Top" index="33" instance=ExtResource( 3 )]
+
+position = Vector2( 70.8746, 7.41493 )
+
+[node name="wall26" parent="exterior_walls/Top" index="34" instance=ExtResource( 3 )]
+
+position = Vector2( 453.698, 7.41493 )
+
+[node name="wall51" parent="exterior_walls/Top" index="35" instance=ExtResource( 3 )]
+
+position = Vector2( 931.54, 7.42961 )
+
+[node name="wall14" parent="exterior_walls/Top" index="36" instance=ExtResource( 3 )]
+
+position = Vector2( 262.729, 7.42886 )
+
+[node name="wall38" parent="exterior_walls/Top" index="37" instance=ExtResource( 3 )]
+
+position = Vector2( 645.553, 7.42886 )
+
+[node name="wall8" parent="exterior_walls/Top" index="38" instance=ExtResource( 3 )]
+
+position = Vector2( 165.875, 6.41493 )
+
+[node name="wall33" parent="exterior_walls/Top" index="39" instance=ExtResource( 3 )]
+
+position = Vector2( 548.698, 6.41493 )
+
+[node name="wall52" parent="exterior_walls/Top" index="40" instance=ExtResource( 3 )]
+
+position = Vector2( 1025.54, 6.42961 )
+
+[node name="wall21" parent="exterior_walls/Top" index="41" instance=ExtResource( 3 )]
+
+position = Vector2( 357.729, 6.42886 )
+
+[node name="wall53" parent="exterior_walls/Top" index="42" instance=ExtResource( 3 )]
+
+position = Vector2( 835.57, 6.44353 )
+
+[node name="wall42" parent="exterior_walls/Top" index="43" instance=ExtResource( 3 )]
+
+position = Vector2( 740.553, 6.42886 )
+
+[node name="wall3" parent="exterior_walls/Top" index="44" instance=ExtResource( 3 )]
+
+position = Vector2( 39, 7 )
+
+[node name="wall27" parent="exterior_walls/Top" index="45" instance=ExtResource( 3 )]
+
+position = Vector2( 421.824, 7 )
+
+[node name="wall59" parent="exterior_walls/Top" index="46" instance=ExtResource( 3 )]
+
+position = Vector2( 899.665, 7.01468 )
+
+[node name="wall15" parent="exterior_walls/Top" index="47" instance=ExtResource( 3 )]
+
+position = Vector2( 230.855, 7.01392 )
+
+[node name="wall45" parent="exterior_walls/Top" index="48" instance=ExtResource( 3 )]
+
+position = Vector2( 613.678, 7.01392 )
+
+[node name="wall9" parent="exterior_walls/Top" index="49" instance=ExtResource( 3 )]
+
+position = Vector2( 134, 6 )
+
+[node name="wall30" parent="exterior_walls/Top" index="50" instance=ExtResource( 3 )]
+
+position = Vector2( 516.824, 6 )
+
+[node name="wall61" parent="exterior_walls/Top" index="51" instance=ExtResource( 3 )]
+
+position = Vector2( 994.49, 6.53915 )
+
+[node name="wall18" parent="exterior_walls/Top" index="52" instance=ExtResource( 3 )]
+
+position = Vector2( 325.855, 6.01392 )
+
+[node name="wall57" parent="exterior_walls/Top" index="53" instance=ExtResource( 3 )]
+
+position = Vector2( 803.696, 6.0286 )
+
+[node name="wall39" parent="exterior_walls/Top" index="54" instance=ExtResource( 3 )]
+
+position = Vector2( 708.678, 6.01392 )
+
+[node name="wall5" parent="exterior_walls/Top" index="55" instance=ExtResource( 3 )]
+
+position = Vector2( 87, 7 )
+
+[node name="wall29" parent="exterior_walls/Top" index="56" instance=ExtResource( 3 )]
+
+position = Vector2( 469.824, 7 )
+
+[node name="wall58" parent="exterior_walls/Top" index="57" instance=ExtResource( 3 )]
+
+position = Vector2( 947.665, 7.01468 )
+
+[node name="wall17" parent="exterior_walls/Top" index="58" instance=ExtResource( 3 )]
+
+position = Vector2( 278.855, 7.01392 )
+
+[node name="wall36" parent="exterior_walls/Top" index="59" instance=ExtResource( 3 )]
+
+position = Vector2( 661.678, 7.01392 )
+
+[node name="wall11" parent="exterior_walls/Top" index="60" instance=ExtResource( 3 )]
+
+position = Vector2( 182, 7 )
+
+[node name="wall31" parent="exterior_walls/Top" index="61" instance=ExtResource( 3 )]
+
+position = Vector2( 564.824, 7 )
+
+[node name="wall19" parent="exterior_walls/Top" index="62" instance=ExtResource( 3 )]
+
+position = Vector2( 373.855, 6.01392 )
+
+[node name="wall60" parent="exterior_walls/Top" index="63" instance=ExtResource( 3 )]
+
+position = Vector2( 851.696, 6.0286 )
+
+[node name="wall48" parent="exterior_walls/Top" index="64" instance=ExtResource( 3 )]
+
+position = Vector2( 755.678, 6.01392 )
+
+[node name="Bottom" type="Node2D" parent="exterior_walls" index="1"]
+
+editor/display_folded = true
+position = Vector2( -3, 587 )
+
+[node name="wall" parent="exterior_walls/Bottom" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 7.02936, 7.522 )
+
+[node name="wall28" parent="exterior_walls/Bottom" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 389.853, 7.522 )
+
+[node name="wall65" parent="exterior_walls/Bottom" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 867.694, 7.53668 )
+
+[node name="wall16" parent="exterior_walls/Bottom" index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 198.884, 7.53593 )
+
+[node name="wall47" parent="exterior_walls/Bottom" index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 581.708, 7.53593 )
+
+[node name="wall10" parent="exterior_walls/Bottom" index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 102.029, 6.522 )
+
+[node name="wall37" parent="exterior_walls/Bottom" index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 484.853, 6.522 )
+
+[node name="wall62" parent="exterior_walls/Bottom" index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 962.694, 6.53668 )
+
+[node name="wall23" parent="exterior_walls/Bottom" index="8" instance=ExtResource( 3 )]
+
+position = Vector2( 293.884, 6.53593 )
+
+[node name="wall63" parent="exterior_walls/Bottom" index="9" instance=ExtResource( 3 )]
+
+position = Vector2( 771.725, 6.55061 )
+
+[node name="wall44" parent="exterior_walls/Bottom" index="10" instance=ExtResource( 3 )]
+
+position = Vector2( 676.708, 6.53593 )
+
+[node name="wall6" parent="exterior_walls/Bottom" index="11" instance=ExtResource( 3 )]
+
+position = Vector2( 55.0294, 7.522 )
+
+[node name="wall32" parent="exterior_walls/Bottom" index="12" instance=ExtResource( 3 )]
+
+position = Vector2( 437.853, 7.522 )
+
+[node name="wall64" parent="exterior_walls/Bottom" index="13" instance=ExtResource( 3 )]
+
+position = Vector2( 915.694, 7.53668 )
+
+[node name="wall20" parent="exterior_walls/Bottom" index="14" instance=ExtResource( 3 )]
+
+position = Vector2( 246.884, 7.53593 )
+
+[node name="wall40" parent="exterior_walls/Bottom" index="15" instance=ExtResource( 3 )]
+
+position = Vector2( 629.708, 7.53593 )
+
+[node name="wall12" parent="exterior_walls/Bottom" index="16" instance=ExtResource( 3 )]
+
+position = Vector2( 150.029, 6.522 )
+
+[node name="wall41" parent="exterior_walls/Bottom" index="17" instance=ExtResource( 3 )]
+
+position = Vector2( 532.853, 6.522 )
+
+[node name="wall54" parent="exterior_walls/Bottom" index="18" instance=ExtResource( 3 )]
+
+position = Vector2( 1010.69, 6.53668 )
+
+[node name="wall24" parent="exterior_walls/Bottom" index="19" instance=ExtResource( 3 )]
+
+position = Vector2( 341.884, 6.53593 )
+
+[node name="wall49" parent="exterior_walls/Bottom" index="20" instance=ExtResource( 3 )]
+
+position = Vector2( 819.725, 6.55061 )
+
+[node name="wall46" parent="exterior_walls/Bottom" index="21" instance=ExtResource( 3 )]
+
+position = Vector2( 724.708, 6.53593 )
+
+[node name="wall2" parent="exterior_walls/Bottom" index="22" instance=ExtResource( 3 )]
+
+position = Vector2( 22.8746, 7.41493 )
+
+[node name="wall25" parent="exterior_walls/Bottom" index="23" instance=ExtResource( 3 )]
+
+position = Vector2( 405.698, 7.41493 )
+
+[node name="wall50" parent="exterior_walls/Bottom" index="24" instance=ExtResource( 3 )]
+
+position = Vector2( 883.54, 7.42961 )
+
+[node name="wall13" parent="exterior_walls/Bottom" index="25" instance=ExtResource( 3 )]
+
+position = Vector2( 214.729, 7.42886 )
+
+[node name="wall35" parent="exterior_walls/Bottom" index="26" instance=ExtResource( 3 )]
+
+position = Vector2( 597.553, 7.42886 )
+
+[node name="wall7" parent="exterior_walls/Bottom" index="27" instance=ExtResource( 3 )]
+
+position = Vector2( 117.875, 6.41493 )
+
+[node name="wall34" parent="exterior_walls/Bottom" index="28" instance=ExtResource( 3 )]
+
+position = Vector2( 500.698, 6.41493 )
+
+[node name="wall55" parent="exterior_walls/Bottom" index="29" instance=ExtResource( 3 )]
+
+position = Vector2( 978.54, 6.42961 )
+
+[node name="wall22" parent="exterior_walls/Bottom" index="30" instance=ExtResource( 3 )]
+
+position = Vector2( 309.729, 6.42886 )
+
+[node name="wall56" parent="exterior_walls/Bottom" index="31" instance=ExtResource( 3 )]
+
+position = Vector2( 787.57, 6.44353 )
+
+[node name="wall43" parent="exterior_walls/Bottom" index="32" instance=ExtResource( 3 )]
+
+position = Vector2( 692.553, 6.42886 )
+
+[node name="wall4" parent="exterior_walls/Bottom" index="33" instance=ExtResource( 3 )]
+
+position = Vector2( 70.8746, 7.41493 )
+
+[node name="wall26" parent="exterior_walls/Bottom" index="34" instance=ExtResource( 3 )]
+
+position = Vector2( 453.698, 7.41493 )
+
+[node name="wall51" parent="exterior_walls/Bottom" index="35" instance=ExtResource( 3 )]
+
+position = Vector2( 931.54, 7.42961 )
+
+[node name="wall14" parent="exterior_walls/Bottom" index="36" instance=ExtResource( 3 )]
+
+position = Vector2( 262.729, 7.42886 )
+
+[node name="wall38" parent="exterior_walls/Bottom" index="37" instance=ExtResource( 3 )]
+
+position = Vector2( 645.553, 7.42886 )
+
+[node name="wall8" parent="exterior_walls/Bottom" index="38" instance=ExtResource( 3 )]
+
+position = Vector2( 165.875, 6.41493 )
+
+[node name="wall33" parent="exterior_walls/Bottom" index="39" instance=ExtResource( 3 )]
+
+position = Vector2( 548.698, 6.41493 )
+
+[node name="wall52" parent="exterior_walls/Bottom" index="40" instance=ExtResource( 3 )]
+
+position = Vector2( 1025.54, 6.42961 )
+
+[node name="wall21" parent="exterior_walls/Bottom" index="41" instance=ExtResource( 3 )]
+
+position = Vector2( 357.729, 6.42886 )
+
+[node name="wall53" parent="exterior_walls/Bottom" index="42" instance=ExtResource( 3 )]
+
+position = Vector2( 835.57, 6.44353 )
+
+[node name="wall42" parent="exterior_walls/Bottom" index="43" instance=ExtResource( 3 )]
+
+position = Vector2( 740.553, 6.42886 )
+
+[node name="wall3" parent="exterior_walls/Bottom" index="44" instance=ExtResource( 3 )]
+
+position = Vector2( 39, 7 )
+
+[node name="wall27" parent="exterior_walls/Bottom" index="45" instance=ExtResource( 3 )]
+
+position = Vector2( 421.824, 7 )
+
+[node name="wall59" parent="exterior_walls/Bottom" index="46" instance=ExtResource( 3 )]
+
+position = Vector2( 899.665, 7.01468 )
+
+[node name="wall15" parent="exterior_walls/Bottom" index="47" instance=ExtResource( 3 )]
+
+position = Vector2( 230.855, 7.01392 )
+
+[node name="wall45" parent="exterior_walls/Bottom" index="48" instance=ExtResource( 3 )]
+
+position = Vector2( 613.678, 7.01392 )
+
+[node name="wall9" parent="exterior_walls/Bottom" index="49" instance=ExtResource( 3 )]
+
+position = Vector2( 134, 6 )
+
+[node name="wall30" parent="exterior_walls/Bottom" index="50" instance=ExtResource( 3 )]
+
+position = Vector2( 516.824, 6 )
+
+[node name="wall61" parent="exterior_walls/Bottom" index="51" instance=ExtResource( 3 )]
+
+position = Vector2( 994.49, 6.53915 )
+
+[node name="wall18" parent="exterior_walls/Bottom" index="52" instance=ExtResource( 3 )]
+
+position = Vector2( 325.855, 6.01392 )
+
+[node name="wall57" parent="exterior_walls/Bottom" index="53" instance=ExtResource( 3 )]
+
+position = Vector2( 803.696, 6.0286 )
+
+[node name="wall39" parent="exterior_walls/Bottom" index="54" instance=ExtResource( 3 )]
+
+position = Vector2( 708.678, 6.01392 )
+
+[node name="wall5" parent="exterior_walls/Bottom" index="55" instance=ExtResource( 3 )]
+
+position = Vector2( 87, 7 )
+
+[node name="wall29" parent="exterior_walls/Bottom" index="56" instance=ExtResource( 3 )]
+
+position = Vector2( 469.824, 7 )
+
+[node name="wall58" parent="exterior_walls/Bottom" index="57" instance=ExtResource( 3 )]
+
+position = Vector2( 947.665, 7.01468 )
+
+[node name="wall17" parent="exterior_walls/Bottom" index="58" instance=ExtResource( 3 )]
+
+position = Vector2( 278.855, 7.01392 )
+
+[node name="wall36" parent="exterior_walls/Bottom" index="59" instance=ExtResource( 3 )]
+
+position = Vector2( 661.678, 7.01392 )
+
+[node name="wall11" parent="exterior_walls/Bottom" index="60" instance=ExtResource( 3 )]
+
+position = Vector2( 182, 7 )
+
+[node name="wall31" parent="exterior_walls/Bottom" index="61" instance=ExtResource( 3 )]
+
+position = Vector2( 564.824, 7 )
+
+[node name="wall19" parent="exterior_walls/Bottom" index="62" instance=ExtResource( 3 )]
+
+position = Vector2( 373.855, 6.01392 )
+
+[node name="wall60" parent="exterior_walls/Bottom" index="63" instance=ExtResource( 3 )]
+
+position = Vector2( 851.696, 6.0286 )
+
+[node name="wall48" parent="exterior_walls/Bottom" index="64" instance=ExtResource( 3 )]
+
+position = Vector2( 755.678, 6.01392 )
+
+[node name="Left" type="Node2D" parent="exterior_walls" index="2"]
+
+editor/display_folded = true
+
+[node name="wall" parent="exterior_walls/Left" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 23.3758 )
+
+[node name="wall24" parent="exterior_walls/Left" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 23.3758 )
+
+[node name="wall15" parent="exterior_walls/Left" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 151.376 )
+
+[node name="wall28" parent="exterior_walls/Left" index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 279.376 )
+
+[node name="wall19" parent="exterior_walls/Left" index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 151.376 )
+
+[node name="wall36" parent="exterior_walls/Left" index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 279.376 )
+
+[node name="wall8" parent="exterior_walls/Left" index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 87.3758 )
+
+[node name="wall17" parent="exterior_walls/Left" index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 87.3758 )
+
+[node name="wall9" parent="exterior_walls/Left" index="8" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 215.376 )
+
+[node name="wall27" parent="exterior_walls/Left" index="9" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 343.376 )
+
+[node name="wall37" parent="exterior_walls/Left" index="10" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 455.376 )
+
+[node name="wall47" parent="exterior_walls/Left" index="11" instance=ExtResource( 3 )]
+
+position = Vector2( 6.63023, 547.376 )
+
+[node name="wall18" parent="exterior_walls/Left" index="12" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 215.376 )
+
+[node name="wall35" parent="exterior_walls/Left" index="13" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 343.376 )
+
+[node name="wall44" parent="exterior_walls/Left" index="14" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 455.376 )
+
+[node name="wall51" parent="exterior_walls/Left" index="15" instance=ExtResource( 3 )]
+
+position = Vector2( 6.63023, 547.376 )
+
+[node name="wall4" parent="exterior_walls/Left" index="16" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 55.3758 )
+
+[node name="wall23" parent="exterior_walls/Left" index="17" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 55.3758 )
+
+[node name="wall11" parent="exterior_walls/Left" index="18" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 183.376 )
+
+[node name="wall29" parent="exterior_walls/Left" index="19" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 311.376 )
+
+[node name="wall38" parent="exterior_walls/Left" index="20" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 423.376 )
+
+[node name="wall20" parent="exterior_walls/Left" index="21" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 183.376 )
+
+[node name="wall34" parent="exterior_walls/Left" index="22" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 311.376 )
+
+[node name="wall43" parent="exterior_walls/Left" index="23" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 423.376 )
+
+[node name="wall5" parent="exterior_walls/Left" index="24" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 119.376 )
+
+[node name="wall21" parent="exterior_walls/Left" index="25" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 119.376 )
+
+[node name="wall10" parent="exterior_walls/Left" index="26" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 247.376 )
+
+[node name="wall33" parent="exterior_walls/Left" index="27" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 375.376 )
+
+[node name="wall42" parent="exterior_walls/Left" index="28" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 487.376 )
+
+[node name="wall50" parent="exterior_walls/Left" index="29" instance=ExtResource( 3 )]
+
+position = Vector2( 6.63023, 579.376 )
+
+[node name="wall22" parent="exterior_walls/Left" index="30" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 247.376 )
+
+[node name="wall32" parent="exterior_walls/Left" index="31" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 375.376 )
+
+[node name="wall41" parent="exterior_walls/Left" index="32" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 487.376 )
+
+[node name="wall52" parent="exterior_walls/Left" index="33" instance=ExtResource( 3 )]
+
+position = Vector2( 6.63023, 579.376 )
+
+[node name="wall2" parent="exterior_walls/Left" index="34" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 39.3758 )
+
+[node name="wall12" parent="exterior_walls/Left" index="35" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 167.376 )
+
+[node name="wall25" parent="exterior_walls/Left" index="36" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 295.376 )
+
+[node name="wall39" parent="exterior_walls/Left" index="37" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 407.376 )
+
+[node name="wall6" parent="exterior_walls/Left" index="38" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 103.376 )
+
+[node name="wall16" parent="exterior_walls/Left" index="39" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 231.376 )
+
+[node name="wall31" parent="exterior_walls/Left" index="40" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 359.376 )
+
+[node name="wall40" parent="exterior_walls/Left" index="41" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 471.376 )
+
+[node name="wall48" parent="exterior_walls/Left" index="42" instance=ExtResource( 3 )]
+
+position = Vector2( 6.63023, 563.376 )
+
+[node name="wall3" parent="exterior_walls/Left" index="43" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 71.3758 )
+
+[node name="wall14" parent="exterior_walls/Left" index="44" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 199.376 )
+
+[node name="wall30" parent="exterior_walls/Left" index="45" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 327.376 )
+
+[node name="wall45" parent="exterior_walls/Left" index="46" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 439.376 )
+
+[node name="wall49" parent="exterior_walls/Left" index="47" instance=ExtResource( 3 )]
+
+position = Vector2( 6.63023, 531.376 )
+
+[node name="wall7" parent="exterior_walls/Left" index="48" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 135.376 )
+
+[node name="wall13" parent="exterior_walls/Left" index="49" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 263.376 )
+
+[node name="wall26" parent="exterior_walls/Left" index="50" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 391.376 )
+
+[node name="wall46" parent="exterior_walls/Left" index="51" instance=ExtResource( 3 )]
+
+position = Vector2( 7.08989, 503.376 )
+
+[node name="wall53" parent="exterior_walls/Left" index="52" instance=ExtResource( 3 )]
+
+position = Vector2( 7.08989, 517.376 )
+
+[node name="Right" type="Node2D" parent="exterior_walls" index="3"]
+
+editor/display_folded = true
+position = Vector2( 1016, 0 )
+
+[node name="wall" parent="exterior_walls/Right" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 23.3758 )
+
+[node name="wall24" parent="exterior_walls/Right" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 23.3758 )
+
+[node name="wall15" parent="exterior_walls/Right" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 151.376 )
+
+[node name="wall28" parent="exterior_walls/Right" index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 279.376 )
+
+[node name="wall19" parent="exterior_walls/Right" index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 151.376 )
+
+[node name="wall36" parent="exterior_walls/Right" index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 279.376 )
+
+[node name="wall8" parent="exterior_walls/Right" index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 87.3758 )
+
+[node name="wall17" parent="exterior_walls/Right" index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 87.3758 )
+
+[node name="wall9" parent="exterior_walls/Right" index="8" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 215.376 )
+
+[node name="wall27" parent="exterior_walls/Right" index="9" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 343.376 )
+
+[node name="wall37" parent="exterior_walls/Right" index="10" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 455.376 )
+
+[node name="wall47" parent="exterior_walls/Right" index="11" instance=ExtResource( 3 )]
+
+position = Vector2( 6.63023, 547.376 )
+
+[node name="wall18" parent="exterior_walls/Right" index="12" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 215.376 )
+
+[node name="wall35" parent="exterior_walls/Right" index="13" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 343.376 )
+
+[node name="wall44" parent="exterior_walls/Right" index="14" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 455.376 )
+
+[node name="wall51" parent="exterior_walls/Right" index="15" instance=ExtResource( 3 )]
+
+position = Vector2( 6.63023, 547.376 )
+
+[node name="wall4" parent="exterior_walls/Right" index="16" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 55.3758 )
+
+[node name="wall23" parent="exterior_walls/Right" index="17" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 55.3758 )
+
+[node name="wall11" parent="exterior_walls/Right" index="18" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 183.376 )
+
+[node name="wall29" parent="exterior_walls/Right" index="19" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 311.376 )
+
+[node name="wall38" parent="exterior_walls/Right" index="20" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 423.376 )
+
+[node name="wall20" parent="exterior_walls/Right" index="21" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 183.376 )
+
+[node name="wall34" parent="exterior_walls/Right" index="22" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 311.376 )
+
+[node name="wall43" parent="exterior_walls/Right" index="23" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 423.376 )
+
+[node name="wall5" parent="exterior_walls/Right" index="24" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 119.376 )
+
+[node name="wall21" parent="exterior_walls/Right" index="25" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 119.376 )
+
+[node name="wall10" parent="exterior_walls/Right" index="26" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 247.376 )
+
+[node name="wall33" parent="exterior_walls/Right" index="27" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 375.376 )
+
+[node name="wall42" parent="exterior_walls/Right" index="28" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 487.376 )
+
+[node name="wall50" parent="exterior_walls/Right" index="29" instance=ExtResource( 3 )]
+
+position = Vector2( 6.63023, 579.376 )
+
+[node name="wall22" parent="exterior_walls/Right" index="30" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 247.376 )
+
+[node name="wall32" parent="exterior_walls/Right" index="31" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 375.376 )
+
+[node name="wall41" parent="exterior_walls/Right" index="32" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 487.376 )
+
+[node name="wall52" parent="exterior_walls/Right" index="33" instance=ExtResource( 3 )]
+
+position = Vector2( 6.63023, 579.376 )
+
+[node name="wall2" parent="exterior_walls/Right" index="34" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 39.3758 )
+
+[node name="wall12" parent="exterior_walls/Right" index="35" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 167.376 )
+
+[node name="wall25" parent="exterior_walls/Right" index="36" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 295.376 )
+
+[node name="wall39" parent="exterior_walls/Right" index="37" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 407.376 )
+
+[node name="wall6" parent="exterior_walls/Right" index="38" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 103.376 )
+
+[node name="wall16" parent="exterior_walls/Right" index="39" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 231.376 )
+
+[node name="wall31" parent="exterior_walls/Right" index="40" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 359.376 )
+
+[node name="wall40" parent="exterior_walls/Right" index="41" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 471.376 )
+
+[node name="wall48" parent="exterior_walls/Right" index="42" instance=ExtResource( 3 )]
+
+position = Vector2( 6.63023, 563.376 )
+
+[node name="wall3" parent="exterior_walls/Right" index="43" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 71.3758 )
+
+[node name="wall14" parent="exterior_walls/Right" index="44" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 199.376 )
+
+[node name="wall30" parent="exterior_walls/Right" index="45" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 327.376 )
+
+[node name="wall45" parent="exterior_walls/Right" index="46" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 439.376 )
+
+[node name="wall49" parent="exterior_walls/Right" index="47" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 532.376 )
+
+[node name="wall7" parent="exterior_walls/Right" index="48" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 135.376 )
+
+[node name="wall13" parent="exterior_walls/Right" index="49" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 263.376 )
+
+[node name="wall26" parent="exterior_walls/Right" index="50" instance=ExtResource( 3 )]
+
+position = Vector2( 7.63023, 391.376 )
+
+[node name="wall46" parent="exterior_walls/Right" index="51" instance=ExtResource( 3 )]
+
+position = Vector2( 7.08989, 503.376 )
+
+[node name="wall53" parent="exterior_walls/Right" index="52" instance=ExtResource( 3 )]
+
+position = Vector2( 7.08989, 517.376 )
+
+

@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://script/main.gd" type="Script" id=1]
+[ext_resource path="res://scene/Level.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scene/HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sound/loop.wav" type="AudioStream" id=5]
+[ext_resource path="res://sound/game_over.wav" type="AudioStream" id=6]
+
+[node name="main" type="Node"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
+Stage = ExtResource( 2 )
+
+[node name="player" parent="." index="0" instance=ExtResource( 3 )]
+
+position = Vector2( -15, -15 )
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="pos" type="Position2D" parent="player" index="2"]
+
+position = Vector2( 50, 70 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="ScoreTimer" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="HUD" parent="." index="2" instance=ExtResource( 4 )]
+
+[node name="loop" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 5 )
+volume_db = -20.0
+autoplay = true
+mix_target = 1
+bus = "Master"
+_sections_unfolded = [ "Pause" ]
+
+[node name="game_over_sound" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 6 )
+volume_db = -15.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[connection signal="finished" from="loop" to="." method="_on_loop_finished"]
+
+

@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://script/guard.gd" type="Script" id=1]
+[ext_resource path="res://sprite/guard.png" type="Texture" id=2]
+[ext_resource path="res://sound/detected.wav" type="AudioStream" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[node name="guard" type="RigidBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 2
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 0.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+script = ExtResource( 1 )
+VEL_MIN = 75
+VEL_MAX = 125
+PATHLEN_MIN = 75
+PATHLEN_MAX = 200
+PATHVERT_MAX = 5
+ALWAYS_DETECT_RANGE = 40
+WIDE_DETECT_RANGE = 150
+NORMAL_DETECT_RANGE = 250
+MAX_TRACES = 5
+
+[node name="sprite" type="AnimatedSprite" parent="." index="0"]
+
+frames = SubResource( 1 )
+animation = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+visible = false
+position = Vector2( -0.0434368, 1.48239 )
+scale = Vector2( 1.38127, 1.3448 )
+shape = SubResource( 2 )
+
+[node name="Visible" type="VisibilityNotifier2D" parent="." index="2"]
+
+visible = false
+position = Vector2( -0.0968142, 0.630011 )
+scale = Vector2( 1.4759, 1.57011 )
+rect = Rect2( -10, -10, 20, 20 )
+
+[node name="detect_sound" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 3 )
+volume_db = 0.0
+autoplay = false
+mix_target = 1
+bus = "Master"
+
+
